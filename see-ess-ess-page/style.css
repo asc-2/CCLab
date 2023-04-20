@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(16, 12, 135);
+}
+
+p{
+    font-size: 10px;
+    color: aqua;
+}
+
+/* Selector{
+    property: value;
+} */

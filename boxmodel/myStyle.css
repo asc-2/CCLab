@@ -1,0 +1,59 @@
+h1 {
+    font-family: sans-serif;
+    color: coral;
+}
+
+body {
+    background-color: rgb(13, 8, 49);
+    margin: 0px;
+}
+
+.specialHighlight {
+    font-size: 90px;
+}
+
+.myImage {
+    width: 300px;
+}
+
+.imageBox {
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 80px;
+
+}
+
+.blackDiv {
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    background-color: black;
+}
+
+.luckyDiv {
+    border-width: 1px;
+    border-style: solid;
+    border-color: goldenrod;
+    background-color: rgb(22, 0, 45);
+    position: fixed;
+    left: 25px;
+    top: 125px;
+    opacity: 75%;
+}
+
+.unluckyDiv {
+    border-width: 1px;
+    border-style: solid;
+    border-color: goldenrod;
+    background-color: rgb(22, 0, 45);
+    position: absolute;
+    top: 400px;
+    opacity: 25%;
+    left: 25px;
+
+}
