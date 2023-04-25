@@ -1,0 +1,52 @@
+canvas {
+    display: block;
+}
+
+#container {
+    /* background-color: aqua;  */
+    display: inline-block;
+    margin: auto;
+}
+
+
+
+#container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.wrap {
+    margin: auto;
+    width: 1200px;
+
+}
+
+body {
+    margin: 10;
+    padding: 10;
+    background-color: #91e5ff;
+}
+
+.heading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-text-stroke: 1px rgb(77, 25, 246);
+    text-align: center;
+}
+
+.paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    outline: black;
+    outline-width: 2px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.page2paragraph {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 20%;
+}
+
