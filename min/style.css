@@ -1,0 +1,77 @@
+canvas {
+    display: block;
+}
+
+#container {
+    /* background-color: aqua;  */
+    display: inline-block;
+    margin: auto;
+}
+
+
+
+ #container canvas {
+    width: 1200px !important;
+    height: 600px !important; 
+    align-self: center;
+}
+
+.wrap {
+    margin: auto;
+    width: 1200px;
+
+}
+
+body {
+    margin: 10;
+    padding: 10;
+    background-color: #000000;
+}
+
+.heading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-text-stroke: 1px rgb(77, 25, 246);
+    text-align: center;
+}
+
+.paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    outline: black;
+    outline-width: 2px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.page2paragraph {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 20%;
+}
+
+a:link {
+    color: rgb(92, 86, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  /* a:visited {
+    color: rgb(38, 19, 117);
+    background-color: transparent;
+    text-decoration: none;
+  } */
+  
+  a:hover {
+    color: rgb(170, 133, 255);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: rgb(23, 0, 72);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  

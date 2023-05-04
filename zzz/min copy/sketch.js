@@ -35,7 +35,7 @@ class Taxi{
   constructor(startX, startY, s){
     this.x = startX
     this.y = startY;
-    this.scaleFactor = s;
+    this.scaleFactor = s; 
     this.wheelAngle = 30;
     this.wheelSpeed = 2;
     this.speed = random(-10,10);
