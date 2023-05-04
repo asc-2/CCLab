@@ -52,14 +52,17 @@ function drawEbbinghaus(centerX, centerY, centerCircleSize, surroundingCircleSiz
   ellipse(centerX, centerY, centerCircleSize, centerCircleSize);
 
   // Draw surrounding circles
-  if(deleteCircles == false){
+  let circleAlpha = 255;
+  if(deleteCircles == true){
+    circleAlpha = 100;
+  }
   for (let i = 0; i < numSurroundingCircles; i++) {
     let angle = radians(i * angleBetweenCircles);
     let x = centerX + cos(angle) * distance/(1.3 + (circleNum%6/6));
     let y = centerY + sin(angle) * distance/(1.3 + (circleNum%6/6));
 
-    fill("rgb(189,189,255)");
+    fill(189,189,255, circleAlpha);
     ellipse(x, y, surroundingCircleSize, surroundingCircleSize);
   }
-}
+
 }
