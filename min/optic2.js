@@ -1,68 +1,91 @@
-let gridSize = 30;
-let squareSize = 24;
-let lineSize = 2.5;
-let whiteRectangles = false;
+let numRows = 20;
+let numCols = 200;
+let squareSize = 45;
+let offset = 0.5;
+let drawRectangle = false;
+let opl = 0;
 
 
 function setup() {
-  let canvas = createCanvas(600, 300);
-  canvas.parent("container");
-  background(255);
 
+    let canvas = createCanvas(1200, 600);
+    canvas.parent("container");
+  // createCanvas(1200,600)
 
-  let drawButton = createButton('Expose Illusion');
-  drawButton.position(1.12*width, 2.25*height);
-  drawButton.mousePressed(() => whiteRectangles = !whiteRectangles);
-  fill(0,0,0,80);
-  rect(0,0,width,height);
-  
-
+    let drawButton = createButton('Expose Illusion');
+    drawButton.position(4*width/7, 1.14*height);  
+    drawButton.mousePressed(() => drawRectangle = !drawRectangle);
 
 }
 
 function draw() {
-  
-  for (let x = 0; x <= gridSize; x++) {
-    for (let y = 0; y <= gridSize; y++) {
-      drawBlackSquare(x * (squareSize + lineSize), y * (squareSize + lineSize), squareSize);
-    }
+  background(220);
+  let colorSquare = 0;
+  if (drawRectangle) {
+      offset -= 0.05;
+      
+
+  } else {
+    offset = floor(offset) + 0.5;
   }
-  for (let x = 0; x <= gridSize; x++) {
-    for (let y = 0; y <= gridSize; y++) {
-      drawWhiteCircle(x * (squareSize + lineSize), y * (squareSize + lineSize), lineSize*2);
-    }
+  for (let row = 0; row < numRows; row++) {
+    for (let col = 0; col < numCols; col++) {
+      let x = col * squareSize * 2 + (row % 2 === 0 ? 0 : squareSize * offset);
+      let y = row * squareSize;
+    //   stroke(255);
+    
+    drawSquare(x, y, squareSize, colorSquare);
+
   }
+
+  // if (drawRectangle) {
+  //   for (let row = 0; row < numRows; row++) {
+  //       for (let col = 0; col < numCols; col++) {
+  //         let x = col * squareSize * 2 + (row % 2 === 0 ? 0 : squareSize * offset);
+  //         let y = row * squareSize;
+  //       //   noStroke();
+  //           fill(255,10);
+  //           stroke(0);
+  //           rect(0, y+height/10, width,squareSize  )
+            
+  //       }
+  //     }
+  }
+
+
   push();
+  noStroke();
+
   fill(0);
   // rect(0,0,width/6,height)
   // rect(5*width/6,0,width/6,height)
-  rect(0,0,width,height/6)
-  rect(0,5*height/6,width,height/6)
-  
+  rect(0,0,width,height/10)
+  rect(0,9*height/10,width,height/10)
   fill(255, 255);
-  textSize(20);
+  textSize(40);
   textAlign(CENTER);
-  text("THERE APPEARS TO BE BLACK DOTS...",width/2,height/8)
-  text("BUT ARE THEY REAL?",width/2,18*height/20)
-
+  text("SLANTED LINES ON THE WALL",width/2,height/20)
+  text("BUT SOMETHING FEELS OFF...",width/2,19.5*height/20)
+  pop();
 }
 
-function drawBlackSquare(x, y, size) {
-  // let colorSquare = 0;
-  if(whiteRectangles == true){
-    colorSquare = 200;
-  } else {
-    colorSquare = 0;
-    
-  }
-  fill(colorSquare);
-  noStroke();
-  rect(x, y + height/6, size, size);
 
-}
 
-function drawWhiteCircle(x, y, size) {
-  fill(255);
+function drawSquare(x, y, size, color) {
+      fill(color);
   noStroke();
-  circle(x-1.2  , y + height/6  -1.3, size);
+  rect(x, y+height/10, size, size);
+
+  strokeWeight(5);
+  stroke(255);
+  // line(x, y + size / 2, x + size, y + size / 2);
+    stroke(80);
+
+  line(0, y+height/10, width, y+height/10);
+
+//   function toggleDrawRectangle() {
+//     drawRectangle = !drawRectangle;
+//   }
+  
+
 }
